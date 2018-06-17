@@ -1,0 +1,24 @@
+<!-- 
+The Create list element in the SellerDashboard in the navbar should be a sublist item of the Campaigns.
+
+Since there was little support in Bootstrap 3.7 for submenus, I had to research to find a workaround for creating a submenu.  Once the submenu was created,
+both submenu items were highlighting on hover.  However, I was able to pinpoint each particular item using more precise CSS element targeting, thus resolving this issue.
+-->
+
+
+
+<li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seller Dashboard <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li class="dropdown-submenu">
+			<a id="campains-submenu" class="test dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Campaigns<span class="caret caret-right"></span></a>
+			<ul class="dropdown-menu">
+				<li id="sub-item1">@Html.ActionLink("Create", "Create", "Campaigns")</li>
+				<li id="sub-item2">@Html.ActionLink("My Campaigns", "SellerIndex", "Campaigns")</li>
+			</ul>
+		</li>
+		<li>@Html.ActionLink("Reviews", "SellerReviewIndex", "Reviews")</li>
+		<li>@Html.ActionLink("Promotions", "Index", "Promotions")</li>
+		<li>@Html.ActionLink("Refer a Friend", "Create", "Referrals")</li>
+	</ul>
+</li>

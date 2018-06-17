@@ -1,0 +1,19 @@
+<!--add sort functionality to the Index page of the Reviews in the form of a dropdown to sort by product name and rating 
+
+added sort functionality to the Index page of the Reviews, in the form of a dropdown, to sort by product name (A-Z, Z-A) and rating (Highest First, Lowest First). 
+
+added button with dropdown menu with sort options, passing the sort parameter to the controller via ViewBag properties-->
+
+
+<div class="dropdown filterArea">
+    <button class="btn btn-default dropdown-toggle" type="button" id="sortBy" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Sort By
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="sortBy">
+        <li>@Html.ActionLink("Name A-Z", "Index", new { sortOrder = ViewBag.NameSortParm })</li>
+        <li>@Html.ActionLink("Name Z-A", "Index", new { sortOrder = ViewBag.NameDescSortParm })</li>
+        <li>@Html.ActionLink("Rating - Highest First", "Index", new { sortOrder = ViewBag.RatingDescSortParm }) </li>
+        <li>@Html.ActionLink("Rating - Lowest First", "Index", new { sortOrder = ViewBag.RatingSortParm }) </li>
+    </ul>
+</div>

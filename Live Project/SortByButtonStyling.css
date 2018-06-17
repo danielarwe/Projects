@@ -1,0 +1,11 @@
+    /*  I cleaned up the user interface, giving certain elements a more cohesive feel to match the rest of the site */
+	
+	/* This styling gives the sortBy buttons a blue background on hover events, to match the effects
+        for the navbar dropdown buttons, and adds a shadow on hover for a more dynamic feel.
+    */
+	
+    #sortBy:hover {
+        background: #4172A8;
+        border: none;
+        box-shadow: 0 0 16px 0 #888888;
+    }
